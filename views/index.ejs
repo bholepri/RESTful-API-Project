@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="body">
+   <h1 style="text-align: center;">Projects</h1> 
+   <% for(Task of Tasks){ %>
+      
+     <div class="post">
+        <h2 class="username"> <%= Task.Task %></h2>
+        <h4 class="content">Time-Period:<%= Task.Period %></h4>
+        
+        <a href="http://localhost:8080/Tasks/<%=Task.id%>">Show Task in Detail</a> <br><br>
+        <a href="http://localhost:8080/Tasks/<%=Task.id%>/edit">Edit the Task</a><br><br>
+        <form method="post" action="/Tasks/<%=Task.id%>?_method=DELETE">
+         <button>Delete Task</button>
+        </form>
+        
+     </div> 
+   
+   <% } %>
+   <br><br>
+   <div style="text-align: center;">
+   <a href="http://localhost:8080/Tasks/new" class="create" ><h2>Create New Task</h2></a>
+</div>
+</body>
+</html>

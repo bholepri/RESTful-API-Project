@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit the Task</title>
+    <link rel="stylesheet" href="/style1.css">
+</head>
+<body>
+    <h1>Edit Your Task</h1>
+    <p class="id"><b>Task id:</b> <%= Task.id %></p>
+<div class="box" style="height: 520px;">
+    <form method="post" action="/Tasks/<%=Task.id%>?_method=PATCH">
+        <h2 class="margin">Task:</h2>
+        <textarea rows="2" cols="20" name="Task" class="margin"><%= Task.Task %></textarea>
+        <h2 class="margin">Time-Period:</h2>
+        <textarea rows="2" cols="20" name="Period" class="margin"><%=Task.Period %></textarea>
+        <h2 class="margin">Description:</h2>
+        <textarea rows="5" cols="50" name="Description" class="margin"><%=Task.Description %></textarea><br>
+        <button style="height: 30px; width: 100px;" class="margin">Submit</button>
+    </form>
+</div>
+</body>
+</html>

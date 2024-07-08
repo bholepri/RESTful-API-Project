@@ -1,0 +1,24 @@
+
+h1{
+    color: maroon;
+}
+.post{
+    background-color: #e8ede9;
+    height: 250px;
+    width: 190px;
+    border: 1px solid black;
+    border-radius: 5%;
+    display: inline-block;
+    text-align: center;
+    margin: 30px 50px 0px 50px;
+}
+.username{
+    font-style: italic;
+}
+.create{
+    height: 80px;
+    width: 150px;
+    text-decoration: none;
+    
+    
+}
